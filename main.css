@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.box {
+    border: 1px solid black;
+}
+
+.container {
+    max-width: 100vh;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid>* {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc((.4em + 3vmin) + (.4em + 3vmax));
+}
+
+
+@media only screen and (max-width: 1020px) {
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid {
+        width: 100vw;
+        height: 100vw; 
+    }
+}
